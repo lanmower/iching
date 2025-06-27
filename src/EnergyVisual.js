@@ -110,6 +110,7 @@ function EnergyVisual({ lines = [], changingLines = [], trigrams = {} }) {
                 ctx.stroke();
             } else {
                 // Broken line for Yin
+                // eslint-disable-next-line no-unused-vars
                 const segmentLength = (LINE_WIDTH - YIN_GAP) / 2;
                 
                 ctx.beginPath();
@@ -143,7 +144,7 @@ function EnergyVisual({ lines = [], changingLines = [], trigrams = {} }) {
                 cancelAnimationFrame(animationRef.current);
             }
         };
-    }, [lines, changingLines, trigrams, isAnimating]);
+    }, [lines, changingLines, trigrams, isAnimating, CENTER_X, CENTER_Y, START_Y]);
 
     if (!lines || lines.length !== 6) {
         return (
