@@ -20,8 +20,11 @@ function App() {
         userPresence: 'approaching'
     });
     
+    // eslint-disable-next-line no-unused-vars
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    // eslint-disable-next-line no-unused-vars
     const [scrollDepth, setScrollDepth] = useState(0);
+    // eslint-disable-next-line no-unused-vars
     const [breathingPhase, setBreathingPhase] = useState(0);
 
     // Jinba ittai: Respond to user's natural movements
