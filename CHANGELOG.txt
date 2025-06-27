@@ -1,0 +1,25 @@
+
+# Changelog
+
+## 2025-02-15
+
+- Refactored trigram generation logic to be more modular and reusable.
+- Implemented visual display logic to accurately represent the energy of the trigram.
+- Provided detailed explanations for each trigram.
+- Added unit tests for all new functionality.
+- Updated README.md for clarity.
+- Added JSDoc comments for better documentation.
+- Added a default route to handle the root URL.
+- Verified and ensured all dependencies are correctly configured.
+- Executed tests to ensure there are no issues.
+- Added Babel preset for React to enable JSX transformation.
+- Updated App.js to include TrigramDisplay, EnergyVisual, and Explanation components.
+- Created TrigramDisplay, EnergyVisual, and Explanation components.
+- Added CSS for styling the App.
+- Added unit tests for the App component.
+- Updated package.json to include necessary dependencies.
+- Integrated the front end and back end to ensure everything works.
+- Added tests to ensure the integration works as expected.
+- Fixed errors in the logs and tests.
+- Updated the default route to display the main content.
+

@@ -1,0 +1,6 @@
+
+- Add more explanations for different trigrams.
+- Optimize performance and ensure security best practices.
+- Document user-facing text for internationalization and localization support.
+- Refactor any remaining long files into smaller files.
+- Minimize interdependencies in functions.
