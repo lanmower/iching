@@ -117,9 +117,29 @@ function Explanation({ explanation }) {
                     <h3 style={{ fontSize: '1.25rem', marginBottom: '16px', color: '#fbbf24' }}>
                         The Judgment (判辭)
                     </h3>
-                    <p style={{ fontSize: '1.2rem', marginBottom: '0' }}>
+                    <p style={{ fontSize: '1.2rem', marginBottom: '16px' }}>
                         "{hexagram.judgment}"
                     </p>
+                    {hexagram.classical && (
+                        <div style={{ marginBottom: '16px' }}>
+                            <p style={{ fontSize: '1.1rem', marginBottom: '8px', fontFamily: '"Noto Serif SC", serif' }}>
+                                {hexagram.classical}
+                            </p>
+                            <p style={{ fontSize: '1rem', opacity: 0.9 }}>
+                                {hexagram.translation}
+                            </p>
+                        </div>
+                    )}
+                    {hexagram.source && (
+                        <p style={{ fontSize: '0.9rem', opacity: 0.8, fontStyle: 'italic' }}>
+                            Source: {hexagram.source}
+                        </p>
+                    )}
+                    {hexagram.commentary && (
+                        <p style={{ fontSize: '0.95rem', opacity: 0.85, marginTop: '12px' }}>
+                            {hexagram.commentary}
+                        </p>
+                    )}
                 </div>
 
                 {interpretation && (
@@ -413,6 +433,16 @@ function Explanation({ explanation }) {
                                 <p><strong>Emotion:</strong> {trigrams.upper.emotion}</p>
                                 <p><strong>Organ:</strong> {trigrams.upper.organ}</p>
                             </div>
+                            {trigrams.upper.source && (
+                                <p style={{ fontSize: '0.85rem', opacity: 0.7, fontStyle: 'italic', marginTop: '12px' }}>
+                                    Source: {trigrams.upper.source}
+                                </p>
+                            )}
+                            {trigrams.upper.commentary && (
+                                <p style={{ fontSize: '0.9rem', opacity: 0.8, marginTop: '8px' }}>
+                                    {trigrams.upper.commentary}
+                                </p>
+                            )}
                         </div>
                     </div>
                     
@@ -466,6 +496,16 @@ function Explanation({ explanation }) {
                                 <p><strong>Emotion:</strong> {trigrams.lower.emotion}</p>
                                 <p><strong>Organ:</strong> {trigrams.lower.organ}</p>
                             </div>
+                            {trigrams.lower.source && (
+                                <p style={{ fontSize: '0.85rem', opacity: 0.7, fontStyle: 'italic', marginTop: '12px' }}>
+                                    Source: {trigrams.lower.source}
+                                </p>
+                            )}
+                            {trigrams.lower.commentary && (
+                                <p style={{ fontSize: '0.9rem', opacity: 0.8, marginTop: '8px' }}>
+                                    {trigrams.lower.commentary}
+                                </p>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -497,7 +537,17 @@ function Explanation({ explanation }) {
                                     <h4 style={{ fontSize: '1rem', color: '#fbbf24', marginBottom: '12px', fontWeight: '500' }}>
                                         Five Elements Wisdom
                                     </h4>
-                                    <p>{fiveElements.advice}</p>
+                                    <p style={{ marginBottom: '16px' }}>{fiveElements.advice}</p>
+                                    {fiveElements.source && (
+                                        <p style={{ fontSize: '0.9rem', opacity: 0.8, fontStyle: 'italic' }}>
+                                            Source: {fiveElements.source}
+                                        </p>
+                                    )}
+                                    {fiveElements.commentary && (
+                                        <p style={{ fontSize: '0.95rem', opacity: 0.85, marginTop: '12px' }}>
+                                            {fiveElements.commentary}
+                                        </p>
+                                    )}
                                 </div>
                             </div>
                         )}
@@ -721,10 +771,50 @@ function Explanation({ explanation }) {
                         "The I Ching does not offer itself with proofs and results; it does not vaunt itself, 
                         nor is it easy to approach. Like a part of nature, it waits until it is discovered."
                     </p>
-                    <p style={{ fontSize: '0.875rem' }}>
+                    <p style={{ fontSize: '0.875rem', marginBottom: '24px' }}>
                         The wisdom of the I Ching is inexhaustible. Each reading offers layers of meaning 
                         that reveal themselves through contemplation and lived experience.
                     </p>
+                    
+                    <div style={{ 
+                        textAlign: 'left',
+                        backgroundColor: 'rgba(17, 24, 39, 0.6)',
+                        padding: '24px',
+                        borderRadius: '8px',
+                        border: '1px solid #374151'
+                    }}>
+                        <h4 style={{ fontSize: '1rem', color: '#f59e0b', marginBottom: '16px', fontWeight: '600', textAlign: 'center' }}>
+                            Bibliography & Sources
+                        </h4>
+                        <div style={{ fontSize: '0.85rem', lineHeight: '1.6' }}>
+                            <p style={{ marginBottom: '8px' }}>
+                                <strong>Primary Sources:</strong>
+                            </p>
+                            <ul style={{ marginBottom: '16px', paddingLeft: '20px' }}>
+                                <li>Zhou Yi (周易) - The Book of Changes, c. 1000 BCE</li>
+                                <li>Shi Yi (十翼) - The Ten Wings, attributed to Confucius</li>
+                                <li>Shuogua Zhuan (說卦傳) - Discussion of the Trigrams</li>
+                                <li>Huangdi Neijing (黃帝內經) - Yellow Emperor's Classic of Internal Medicine</li>
+                            </ul>
+                            <p style={{ marginBottom: '8px' }}>
+                                <strong>Classical Commentaries:</strong>
+                            </p>
+                            <ul style={{ marginBottom: '16px', paddingLeft: '20px' }}>
+                                <li>Wang Bi (王弼) Commentary, 3rd century CE</li>
+                                <li>Zhu Xi (朱熹) Commentary, Song Dynasty</li>
+                                <li>Cheng Yi (程颐) Commentary, Song Dynasty</li>
+                            </ul>
+                            <p style={{ marginBottom: '8px' }}>
+                                <strong>Modern Scholarly Translations:</strong>
+                            </p>
+                            <ul style={{ paddingLeft: '20px' }}>
+                                <li>Wilhelm, Richard & Baynes, Cary F. (1967). The I Ching or Book of Changes. Princeton University Press.</li>
+                                <li>Legge, James (1882). The Yi King. Sacred Books of the East, Vol. 16. Oxford University Press.</li>
+                                <li>Lynn, Richard J. (1994). The Classic of Changes. Columbia University Press.</li>
+                                <li>Needham, Joseph (1956). Science and Civilization in China, Vol. 2. Cambridge University Press.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
